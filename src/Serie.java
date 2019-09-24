@@ -1,6 +1,6 @@
 
 public class Serie {
-	int serie;
+	String serie;
 	Nota notaSerie = new Nota();
 	
 	//Vitor

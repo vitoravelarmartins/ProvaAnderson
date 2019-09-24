@@ -1,8 +1,7 @@
 import java.util.ArrayList;
 
 public class Nota {
-	//ArrayList<String> Diciplina = new ArrayList<>();
-	String NotaDiciplina;
+	String diciplina;
 	double nota;
 	
 	//Vitor

@@ -6,48 +6,50 @@ public class Vmain {
 
 		Serie quatro = new Serie();
 		Serie dois = new Serie();
-		quatro.serie = 4;
-		dois.serie = 2;
-
-		Diciplina ltpiv = new Diciplina();
-		Diciplina so = new Diciplina();
-		ltpiv.diciplina = "LTPIV";
-		so.diciplina = "SO";
+		quatro.serie = "4";
+		dois.serie = "2";
 
 		// Dados Anderson
+		Diciplina diciplinasAnderson = new Diciplina();
 		Nota notaAnderson = new Nota();
 		notaAnderson.nota = 1.5;
-		notaAnderson.NotaDiciplina = "LTPIV";
-		Aluno objAnderson = new Aluno("Anderson", ads, quatro, ltpiv, notaAnderson);
-		objAnderson.imprimeAluno();
+		notaAnderson.diciplina = "LTPIV";
+		diciplinasAnderson.Diciplina.add(notaAnderson);
 
-		// Dados Joao
-		Nota notaJoao = new Nota();
-		notaJoao.nota = 9.8;
-		notaJoao.NotaDiciplina = "LTPIV";
-		Aluno objJoao = new Aluno("Joao", ads, quatro, ltpiv, notaJoao);
-		objJoao.imprimeAluno();
-
-		// Dados Joaquim
-		Nota notaJoaquim = new Nota();
-		notaJoaquim.nota = 7.8;
-		notaJoaquim.NotaDiciplina = "SO";
-		Aluno objJoaquim = new Aluno("Joaquim", ads, dois, so, notaJoaquim);
-		objJoaquim.imprimeAluno();
-
-		// Dados Maria
-		Nota notaMaria = new Nota();
-		notaMaria.nota = 3.4;
-		notaMaria.NotaDiciplina = "SO";
-		Aluno objMaria = new Aluno("Maria", ads, dois, so, notaMaria);
-		objMaria.imprimeAluno();
-
-		// Dados Anderson
 		Nota notaAnderson2 = new Nota();
 		notaAnderson2.nota = 5.4;
-		notaAnderson2.NotaDiciplina = "SO";
-		Aluno objAnderson2 = new Aluno("Anderson", ads, quatro, so, notaAnderson2);
-		objAnderson2.imprimeAluno();
+		notaAnderson2.diciplina = "SO";
+		diciplinasAnderson.Diciplina.add(notaAnderson2);
+
+		Aluno objAnderson = new Aluno("Anderson", ads, quatro, diciplinasAnderson);
+		// objAnderson.imprimeAluno();
+
+//		// Dados Joao
+		Diciplina diciplinasJoao = new Diciplina();
+		Nota notaJoao = new Nota();
+		notaJoao.nota = 9.8;
+		notaJoao.diciplina = "LTPIV";
+		diciplinasJoao.Diciplina.add(notaJoao);
+		Aluno objJoao = new Aluno("Joao", ads, quatro, diciplinasJoao);
+//		objJoao.imprimeAluno();
+//
+//		// Dados Joaquim
+		Diciplina diciplinasJoaquim = new Diciplina();
+		Nota notaJoaquim = new Nota();
+		notaJoaquim.nota = 7.8;
+		notaJoaquim.diciplina = "SO";
+		diciplinasJoaquim.Diciplina.add(notaJoaquim);
+		Aluno objJoaquim = new Aluno("Joaquim", ads, dois, diciplinasJoaquim);
+//		objJoaquim.imprimeAluno();
+//
+//		// Dados Maria
+		Diciplina diciplinasMaria = new Diciplina();
+		Nota notaMaria = new Nota();
+		notaMaria.nota = 3.4;
+		notaMaria.diciplina = "SO";
+		diciplinasMaria.Diciplina.add(notaMaria);
+		Aluno objMaria = new Aluno("Maria", ads, dois, diciplinasMaria);
+//		objMaria.imprimeAluno();
 
 		Faculdade objFaculdade = new Faculdade();
 
@@ -55,11 +57,13 @@ public class Vmain {
 		objFaculdade.dados.add(objJoao);
 		objFaculdade.dados.add(objJoaquim);
 		objFaculdade.dados.add(objMaria);
-		objFaculdade.dados.add(objAnderson2);
 
-		objFaculdade.medias();
+		objFaculdade.medias("ADS");
+		objFaculdade.medias("4");
+		objFaculdade.medias("Anderson");
+		objFaculdade.medias("SO");
 
 	}
-	//Vitor
+	// Vitor
 
 }
