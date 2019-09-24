@@ -5,5 +5,7 @@ public class Nota {
 	String NotaDiciplina;
 	double nota;
 	
+	//Vitor
+	
 
 }
